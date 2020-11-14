@@ -1,0 +1,28 @@
+{
+  "@pnp/generator-spfx": {
+    "framework": "none",
+    "pnpFramework": "vuejs",
+    "pnp-libraries": [
+      "jquery@3",
+      "lodash",
+      "rush@3.3"
+    ],
+    "pnp-ci": "no-devops",
+    "pnp-vetting": [
+      "webpack-analyzer",
+      "stylelint"
+    ],
+    "spfxenv": "spo"
+  },
+  "@microsoft/generator-sharepoint": {
+    "environment": "spo",
+    "framework": "none",
+    "isCreatingSolution": true,
+    "version": "1.11.0",
+    "libraryName": "spfx-grid",
+    "libraryId": "ad878034-7f84-4de4-977a-bdf20c645757",
+    "packageManager": "npm",
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

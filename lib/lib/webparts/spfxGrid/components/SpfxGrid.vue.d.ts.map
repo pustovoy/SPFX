@@ -1,0 +1,1 @@
+{"version":3,"file":"SpfxGrid.vue.d.ts","sourceRoot":"","sources":["../../../../webparts/spfxGrid/components/SpfxGrid.vue.ts"],"names":[],"mappings":"AA4BA,OAAO,EAAE,GAAG,EAAmB,MAAM,wBAAwB,CAAC;AAG9D;;GAEG;AACH,MAAM,WAAW,cAAc;IAC3B,WAAW,EAAE,MAAM,CAAC;CACvB;AAED;;GAEG;AAMH,MAAM,CAAC,OAAO,OAAO,QAAS,SAAQ,GAAI,YAAW,cAAc;IAE/D;;OAEG;IAEI,WAAW,EAAE,MAAM,CAAC;CAE9B"}
