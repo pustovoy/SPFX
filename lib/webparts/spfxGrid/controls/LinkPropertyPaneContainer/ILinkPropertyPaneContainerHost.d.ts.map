@@ -1,0 +1,1 @@
+{"version":3,"file":"ILinkPropertyPaneContainerHost.d.ts","sourceRoot":"","sources":["../../../../../src/webparts/spfxGrid/controls/LinkPropertyPaneContainer/ILinkPropertyPaneContainerHost.ts"],"names":[],"mappings":"AAAA,MAAM,WAAW,mCAAmC;IAClD,KAAK,EAAE,MAAM,CAAC;IACd,KAAK,CAAC,EAAE,MAAM,CAAC;IACf,cAAc,EAAE,CAAC,KAAK,EAAE,MAAM,KAAK,IAAI,CAAC;IAExC,SAAS,EAAE,MAAM,CAAC;CACnB"}

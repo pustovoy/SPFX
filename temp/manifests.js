@@ -706,7 +706,10 @@ var MANIFESTS_ARRAY = [
         },
         "officeFabricIconFontName": "Page",
         "properties": {
-          "description": "SPFX Grid"
+          "description": "SPFX Grid",
+          "tilesPerLine": "3",
+          "tileHeight": "160",
+          "linkPropertiesArray": []
         }
       }
     ],

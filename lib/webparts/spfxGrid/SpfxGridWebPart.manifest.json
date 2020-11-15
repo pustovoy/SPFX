@@ -21,7 +21,10 @@
     "description": { "default": "SPFX Grid description" },
     "officeFabricIconFontName": "Page",
     "properties": {
-      "description": "SPFX Grid"
+      "description": "SPFX Grid",
+      "tilesPerLine": "3",
+      "tileHeight": "160",
+      "linkPropertiesArray": []
     }
   }]
 }

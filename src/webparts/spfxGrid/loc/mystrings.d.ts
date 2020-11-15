@@ -7,6 +7,7 @@ declare interface ISpfxGridWebPartStrings {
   Style: string;
   Links: string;
   AddNewLink: string;
+  LinkFieldTitle: string;
 }
 
 declare module 'SpfxGridWebPartStrings' {

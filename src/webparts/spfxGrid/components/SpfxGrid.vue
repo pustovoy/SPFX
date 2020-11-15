@@ -1,25 +1,15 @@
 <template>
     <div :class="$style.SpfxGrid">
         <div
-          :class="`${$style.grid} ${$style['grid-three']}`">
+          :class="`${$style.grid} ${$style[getGridClass()]}`">
           <link-container
-            :value="description"
-            :class="$style.link" />
-          <link-container
-            :value="description"
-            :class="$style.link" />
-          <link-container
-            :value="description"
-            :class="$style.link" />
-          <link-container
-            :value="description"
-            :class="$style.link" />
-          <link-container
-            :value="description"
-            :class="$style.link" />
-          <link-container
-            :value="description"
-            :class="$style.link" />
+            v-for="(item, index) in linkPropertiesArray"
+            :key="itemKey ? item[itemKey] : index"
+            :value="item.value"
+            :class="$style.link"
+            :height="tileHeight"
+            :color="item.color"
+            :link="item.link" />
         </div>
 
     </div>
@@ -28,6 +18,7 @@
 <script lang="ts">
 import { Vue, Component, Prop } from 'vue-property-decorator';
 import LinkContainer from './LinkContainer.vue';
+import LinkContainerModel from '../models/link-model';
 
 /**
  * Component's properties
@@ -49,8 +40,24 @@ export default class SpfxGrid extends Vue implements ISpfxGridProps {
     /**
      * implementing ISimpleWebPartProps interface
      */
-    @Prop()
-    public description: string;
+    @Prop() public description: string;
+    @Prop() public tilesPerLine: string;
+    @Prop() public tileHeight: string;
+    @Prop() public linkPropertiesArray: Array<LinkContainerModel>;
+
+    protected gridSize: { key: number, text: string, value: string }[] = [
+      { key: 1, text: "One", value: 'grid-one' },
+      { key: 2, text: "Two", value: 'grid-two' },
+      { key: 3, text: "Three", value: 'grid-three' },
+      { key: 4, text: "Four", value: 'grid-four' },
+      { key: 5, text: "Five", value: 'grid-five' },
+      { key: 6, text: "Six", value: 'grid-six' }
+    ];
+
+    protected getGridClass() {
+      console.log(this.tilesPerLine);
+      return this.gridSize.find(el => el.key === parseInt(this.tilesPerLine)).value;
+    }
 
 }
 </script>
@@ -160,8 +167,9 @@ export default class SpfxGrid extends Vue implements ISpfxGridProps {
   }
 
   .link {
-    display: block;
-    background: red;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
     width: 100%;
     height: 100%;
   }
